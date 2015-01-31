@@ -1,0 +1,10 @@
+{
+  "name": "CHE hacks",
+  "version": "0.0.1",
+  "dependencies": {
+    "bootstrap-sass": "*",
+    "modernizr": "*",
+    "jquery": "*"
+  },
+  "private": true
+}
