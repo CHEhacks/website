@@ -4,6 +4,7 @@ var gitPull = {
 	},
 	post: function (req, res) {
 		console.log("Pulling...")
+		// run_cmd("")
 		run_cmd("git pull origin master");
 		console.log("Pulled!");
 		res.send("Pulled!", 200);
