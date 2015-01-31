@@ -1,6 +1,6 @@
 var gitPull = {
 	get: function (req, res) {
-		res.send("HEY YOU! Can't pull from GET request!");
+		res.send("Can't pull from GET request!");
 	},
 	post: function (req, res) {
 		console.log("Pulling...")
