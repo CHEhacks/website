@@ -49,7 +49,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/gitpull', serverUtils.gitPull.get);
-app.post('/gitpull', serverUtils.gitPull.post);
+// app.post('/gitpull', serverUtils.gitPull.post);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
