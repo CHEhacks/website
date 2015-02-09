@@ -1,6 +1,36 @@
 // bower:scss
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
-body {
-	color: red;
+* {
+	overflow-x: hidden;
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+}
+
+.jumbotron {
+	background: url("../../images/bg.jpg") #333 no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+		height: 50%;
+	}
+
+	.inner div {
+		@include make-row();
+	}
+
+	.logo img {
+		// @include center-block();
+		@include make-xs-column(10);
+		@include make-xs-column-offset(1);
+		@include make-md-column(8);
+		@include make-md-column-offset(2);
+		@include make-lg-column(6);
+		@include make-lg-column-offset(3);	
+	}
 }

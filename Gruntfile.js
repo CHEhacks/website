@@ -14,7 +14,8 @@ module.exports = function(grunt) {
 					compass: false
 				},
 				files: {
-					'<%= project.assets %>/css/style.css':'<%= project.css %>'
+					'<%= project.assets %>/css/style.css':'<%= project.css %>',
+					'<%= project.assets %>/css/index.css':'<%= project.assets %>/sass/index.scss'
 				}
 			}
 		},
@@ -27,7 +28,7 @@ module.exports = function(grunt) {
 		wiredep: {
 		  task: {
 		    src: [
-		      '/views/**/*.ejs',
+		      'views/**/*.ejs',
 		      '<%= project.assets %>/**/*.scss'
 		    ],
 
