@@ -1,9 +1,8 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,300);
+@import "_variables.scss";
 // bower:scss
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
-* {
-	overflow-x: hidden;
-}
 
 html, body {
 	margin: 0px;
@@ -15,7 +14,9 @@ html, body {
 	background: url("../../images/bg.jpg") #333 no-repeat;
 	background-size: cover;
 	background-position: center center;
+	text-align: center;
 	height: 100%;
+
 	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
 		height: 50%;
 	}
@@ -28,9 +29,16 @@ html, body {
 		// @include center-block();
 		@include make-xs-column(10);
 		@include make-xs-column-offset(1);
-		@include make-md-column(8);
-		@include make-md-column-offset(2);
+		@include make-md-column(6);
+		@include make-md-column-offset(3);
 		@include make-lg-column(6);
 		@include make-lg-column-offset(3);	
+	}
+
+	.text {
+		padding-top: 2em;
+		* {
+			color: white;
+		}
 	}
 }

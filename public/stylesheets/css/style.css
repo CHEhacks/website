@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,300);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1057,7 +1058,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5016,7 +5017,7 @@ button.close {
   z-index: 1070;
   display: block;
   visibility: visible;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5111,7 +5112,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857;
@@ -5619,9 +5620,6 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-* {
-  overflow-x: hidden; }
-
 html, body {
   margin: 0px;
   padding: 0px;
@@ -5631,6 +5629,7 @@ html, body {
   background: url("../../images/bg.jpg") #333 no-repeat;
   background-size: cover;
   background-position: center center;
+  text-align: center;
   height: 100%; }
   @media (min-width: 480px) and (max-width: 767px) {
     .jumbotron {
@@ -5662,10 +5661,10 @@ html, body {
     @media (min-width: 992px) {
       .jumbotron .logo img {
         float: left;
-        width: 66.66667%; } }
+        width: 50%; } }
     @media (min-width: 992px) {
       .jumbotron .logo img {
-        margin-left: 16.66667%; } }
+        margin-left: 25%; } }
     @media (min-width: 1200px) {
       .jumbotron .logo img {
         float: left;
@@ -5673,5 +5672,9 @@ html, body {
     @media (min-width: 1200px) {
       .jumbotron .logo img {
         margin-left: 25%; } }
+  .jumbotron .text {
+    padding-top: 2em; }
+    .jumbotron .text * {
+      color: white; }
 
 /*# sourceMappingURL=style.css.map */

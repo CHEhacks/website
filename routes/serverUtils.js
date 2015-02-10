@@ -3,8 +3,7 @@ var gitPull = {
 		res.send("Can't pull from GET request!");
 	},
 	post: function (req, res) {
-		console.log("Pulling...")
-		// run_cmd("")
+		console.log("Pulling...");
 		run_cmd("git pull origin master");
 		console.log("Pulled!");
 		res.send("Pulled!", 200);
