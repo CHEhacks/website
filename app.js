@@ -10,6 +10,7 @@ var serverUtils = require('./routes/serverUtils');
 var http = require('http');
 var path = require('path');
 var sassMiddleware = require('node-sass-middleware');
+var compass = require('node-compass');
 
 var app = express();
 
@@ -33,6 +34,12 @@ app.use(
     	outputStyle: 'compressed'
     })
 );
+app.configure(function() {
+    app.use(compass({
+      sass: 'stylesheets/sass',
+      css: 'stylesheets/css'
+    }));
+});
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.json());

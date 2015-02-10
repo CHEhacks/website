@@ -1,8 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,300);
 @import "_variables.scss";
+@import "_mixins.scss";
+
 // bower:scss
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+* {
+	text-rendering: optimizeLegibility;
+}
 
 html, body {
 	margin: 0px;
@@ -21,14 +27,29 @@ html, body {
 		height: 50%;
 	}
 
-	.inner div {
+	@media (min-width: $screen-xs-max) {
+		&:before {
+			content: '';
+		 	display: inline-block;
+		 	height: 100%;
+		  	vertical-align: middle;
+		  	margin-right: -0.25em; /* Adjusts for spacing */
+		}
+
+		.inner {
+			display: inline-block;
+		  	vertical-align: middle;
+		  	width: 100%;
+		}
+	}
+	.inner > div {
 		@include make-row();
 	}
 
 	.logo img {
 		// @include center-block();
-		@include make-xs-column(10);
-		@include make-xs-column-offset(1);
+		@include make-xs-column(8);
+		@include make-xs-column-offset(2);
 		@include make-md-column(6);
 		@include make-md-column-offset(3);
 		@include make-lg-column(6);
@@ -37,8 +58,55 @@ html, body {
 
 	.text {
 		padding-top: 2em;
+		@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+			padding-top: 1em;
+		}
+
 		* {
 			color: white;
+		}
+		h1 strong {
+			font-size: 0.75em;
+		}
+		h2 small {
+			padding: 0;
+			font-size: 1.25em;
+		}
+	}
+
+	form {
+		padding-top: 4em;
+		@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+			padding-top: 2em;
+		}
+		input, button {
+			height: 50px;
+			font-size: 1.5em;
+		}
+
+		.emailContainer {
+			@include make-xs-column(6);
+			@include make-sm-column(5);
+			@include make-xs-column-offset(1);
+			@include make-sm-column-offset(2);
+			padding-right: 0;
+			input {
+				@include border-right-radius(0);
+				
+			}
+		}
+		button {
+			@include make-xs-column(4);
+			@include make-sm-column(3);
+			@include border-left-radius(0);
+			border: none;
+			color: white;
+			font-weight: 700;
+			background-color: rgba($base-background-color, 0.5);
+			&:hover {
+				background-color: rgba(mix($base-background-color, $primary-color, 70), 0.5);
+				color: white;
+			}
 		}
 	}
 }
