@@ -23,7 +23,11 @@ html, body {
 	text-align: center;
 	height: 100%;
 
-	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+		height: auto;
+	}
+
+	@media screen and (max-height: 600px) {
 		height: auto;
 	}
 
