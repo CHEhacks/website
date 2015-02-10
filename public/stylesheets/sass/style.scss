@@ -24,7 +24,7 @@ html, body {
 	height: 100%;
 
 	@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-		height: 50%;
+		height: auto;
 	}
 
 	@media (min-width: $screen-xs-max) {
