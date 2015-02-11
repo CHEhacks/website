@@ -12,6 +12,7 @@ $primary-color: #E20B1E;
 
 // Background Color
 $base-background-color: lighten(mix($primary-color, $light-gray, 10%), 10%);
+$header-background-color: lighten(mix($primary-color, $light-gray, 70%), 10%);  
 
 // Font Colors
 $base-font-color: $dark-gray;
