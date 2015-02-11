@@ -12,11 +12,14 @@ $primary-color: #E20B1E;
 
 // Background Color
 $base-background-color: lighten(mix($primary-color, $light-gray, 10%), 10%);
-$header-background-color: lighten(mix($primary-color, $light-gray, 70%), 10%);  
+$header-primary-color: lighten(mix($primary-color, $light-gray, 70%), 5%);  
+$header-background-color: lighten(mix($primary-color, $light-gray, 20%), 10%);  
 
 // Font Colors
 $base-font-color: $dark-gray;
 $base-accent-color: rgba(lighten($primary-color, 50%), 0.5);
+$header-large-text-color: $header-primary-color;
+$header-small-text-color: lighten($header-large-text-color, 10%); 
 
 // Link Colors
 $base-link-color: $base-accent-color;

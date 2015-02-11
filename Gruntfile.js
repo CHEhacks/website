@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 		wiredep: {
 		  task: {
 		    src: [
-		      'views/**/*.ejs',
+		      'views/*.ejs',
 		      '<%= project.assets %>/**/*.scss'
 		    ],
 
