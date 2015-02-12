@@ -4,9 +4,13 @@
  */
 
 var express = require('express');
+var fs = require('fs');
 
 exports.index = function(req, res){
-  render('index', {bold: 'Hello'}, res);
+	bronzeSponsorPaths = fs.readdirSync( "public/images/bronze");
+	console.log("HELLFSKF");
+	console.log(bronzeSponsorPaths);
+ 	render('index', {bronzeSponsorPaths: bronzeSponsorPaths}, res);
 };
 
 var render = function(page, vars, res) {

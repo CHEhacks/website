@@ -70,37 +70,16 @@
 		</header>
 		<div class="container">
 			<div class="row bronze">
-				<div class="col-xs-6 col-md-4">
-					<div class="thumbnail">
-						<img src="images/google.png" alt="sponsor">
+				<% for(var i=0; i<bronzeSponsorPaths.length; i++) {%>
+					<div class="col-xs-6 col-md-4">
+						<div class="thumbnail">
+							<img src="images/bronze/<%= bronzeSponsorPaths[i] %>" alt="sponsor">
+						</div>
 					</div>
-				</div>
-				<div class="col-xs-6 col-md-4">
-					<div class="thumbnail">
-						<img src="images/microsoft.jpg" alt="sponsor">
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-4">
-					<div class="thumbnail">
-						<img src="images/syncano.png" alt="sponsor">
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-4">
-					<div class="thumbnail">
-						<img src="images/google.png" alt="sponsor">
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-4">
-					<div class="thumbnail">
-						<img src="images/microsoft.jpg" alt="sponsor">
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-4">
-					<div class="thumbnail">
-						<img src="images/syncano.png" alt="sponsor">
-					</div>
-				</div>
+				<% } %>
 			</div>
+			
+			<h2><a href="mailto:sponsors@chehacks.com">Interested?</a></h2>
 		</div>
 	</div>
 
