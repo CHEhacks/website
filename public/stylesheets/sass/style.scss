@@ -143,11 +143,10 @@ header.h1 {
 	text-align: center;
 	padding: 2em;
 	background-color: $header-background-color;
-	white-space: nowrap;
 
 	@media (max-width: $screen-sm-max) {
 		font-size: 20px;
-		font-size: 4vw;
+		font-size: 5vw;
 	}
 
 	h1 {
