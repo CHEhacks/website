@@ -20,7 +20,8 @@ html, body {
 .jumbotron {
 	display: flex;
 	display: -webkit-flex;
-
+	align-items: center;
+	
 	background: url("../../images/bg.jpg") #333 no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -41,8 +42,6 @@ html, body {
 		width: 100%;
 		margin: auto;
 	}
-
-
 
 	.inner > div {
 		@include make-row();
@@ -213,6 +212,7 @@ header.h1 {
 		@include make-md-column(4);
 
 		@media (max-width: $screen-xs-max) {
+			text-align: center;
 			height: auto;
 		}
 		@media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
