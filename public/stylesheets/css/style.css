@@ -7378,7 +7378,7 @@ header.h1 h2 {
 }
 @media (max-width: 767px) {
   .importantDetails .map iframe {
-    height: 40vh;
+    height: 200px;
   }
 }
 
