@@ -37,7 +37,8 @@ app.use(
 app.configure(function() {
     app.use(compass({
       sass: 'stylesheets/sass',
-      css: 'stylesheets/css'
+      css: 'stylesheets/css',
+      mode: 'expanded'
     }));
 });
 app.use(express.favicon());

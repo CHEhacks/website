@@ -10,7 +10,8 @@
     "ejs": "~2.2.3",
     "node-sass-middleware": "^0.4.0",
     "wiredep": "~2.2.2",
-    "fs": "0.0.2"
+    "fs": "0.0.2",
+    "mongodb": "~1.4.30"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

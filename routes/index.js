@@ -8,8 +8,6 @@ var fs = require('fs');
 
 exports.index = function(req, res){
 	bronzeSponsorPaths = fs.readdirSync( "public/images/bronze");
-	console.log("HELLFSKF");
-	console.log(bronzeSponsorPaths);
  	render('index', {bronzeSponsorPaths: bronzeSponsorPaths}, res);
 };
 

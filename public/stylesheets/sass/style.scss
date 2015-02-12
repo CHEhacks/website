@@ -141,10 +141,12 @@ header.h1 {
 	display: block;
 	width: 100%;
 	text-align: center;
-	padding: 2em;
+	padding: 2em 0em;
 	background-color: $header-background-color;
 
-	@media (max-width: $screen-sm-max) {
+	@media (max-width: $screen-xs-max) {
+		padding-left: 2em;
+		padding-right: 2em;
 		font-size: 20px;
 		font-size: 5vw;
 	}
@@ -162,12 +164,22 @@ header.h1 {
 	}	
 }
 
-.container {
+.container, .container-fluid {
 	padding-top: 3em;
 	padding-bottom: 3em;
 	text-align: center;
 	.block {
 		display: inline-block;
+	}
+}
+
+.mission {
+	h1 {
+		font-weight: 300;
+
+		@media (min-width: $screen-sm-max) {
+			font-size: 2.75vw;
+		}
 	}
 }
 
@@ -192,12 +204,21 @@ header.h1 {
 		border: none;
 	}
 	.bronze .thumbnail {
+		display: flex;
+		display: -webkit-flex;
 		height: 100px;
-		padding-bottom: 
+		margin-bottom: 30px;
+
 		img {
-			width: 100%;
+			margin: auto;
+			width: auto;
 			height: auto;
+			max-width: 100%;
+			max-height: 100%;
 		}
+	}
+	a {
+		font-weight: 300;
 	}
 }
 
