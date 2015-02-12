@@ -21,7 +21,7 @@ html, body {
 	display: flex;
 	display: -webkit-flex;
 	align-items: center;
-	
+
 	background: url("../../images/bg.jpg") #333 no-repeat;
 	background-size: cover;
 	background-position: center center;
@@ -246,7 +246,7 @@ header.h1 {
 
 		img {
 			margin: auto;
-			width: auto;
+			width: 100%;
 			height: auto;
 			max-width: 100%;
 			max-height: 100%;
