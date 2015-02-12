@@ -12,6 +12,9 @@ var path = require('path');
 var sassMiddleware = require('node-sass-middleware');
 var compass = require('node-compass');
 
+var dbURL = 'mongodb://localhost/database';
+var db = require('mongoose').connect(dbURL);
+
 var app = express();
 
 // all environments
@@ -46,6 +49,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+app.use(express.bodyParser());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -55,7 +59,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+app.post('/', routes.signup);
 app.get('/gitpull', serverUtils.gitPull.get);
 app.post('/gitpull', serverUtils.gitPull.post);
 

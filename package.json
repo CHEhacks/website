@@ -11,7 +11,7 @@
     "node-sass-middleware": "^0.4.0",
     "wiredep": "~2.2.2",
     "fs": "0.0.2",
-    "mongodb": "~1.4.30"
+    "mongoose": "~3.8.23"
   },
   "devDependencies": {
     "grunt": "~0.4.5",

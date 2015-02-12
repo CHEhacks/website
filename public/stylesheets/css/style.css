@@ -7221,19 +7221,29 @@ html, body {
   padding: 0;
   font-size: 1.25em;
 }
-.jumbotron form {
+.jumbotron .signup {
   padding-top: 4em;
 }
-@media (min-width: 480px) and (max-width: 767px) {
-  .jumbotron form {
-    padding-top: 2em;
+@media (max-width: 767px) {
+  .jumbotron .signup {
+    padding-top: 1em;
   }
 }
-.jumbotron form input, .jumbotron form button {
+.jumbotron .signup h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 3em;
+}
+@media (max-width: 991px) {
+  .jumbotron .signup h1 {
+    font-size: 4vw;
+  }
+}
+.jumbotron .signup form input, .jumbotron .signup form button {
   height: 50px;
   font-size: 1.5em;
 }
-.jumbotron form .emailContainer {
+.jumbotron .signup form .emailContainer {
   position: relative;
   float: left;
   width: 83.33333%;
@@ -7249,28 +7259,28 @@ html, body {
   padding-right: 0px;
 }
 @media (min-width: 768px) {
-  .jumbotron form .emailContainer {
+  .jumbotron .signup form .emailContainer {
     float: left;
     width: 41.66667%;
   }
 }
 @media (min-width: 768px) {
-  .jumbotron form .emailContainer {
+  .jumbotron .signup form .emailContainer {
     margin-left: 16.66667%;
   }
 }
 @media (min-width: 767px) {
-  .jumbotron form .emailContainer input {
+  .jumbotron .signup form .emailContainer input {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
   }
 }
 @media (max-width: 767px) {
-  .jumbotron form .emailContainer input {
+  .jumbotron .signup form .emailContainer input {
     text-align: center;
   }
 }
-.jumbotron form button {
+.jumbotron .signup form button {
   position: relative;
   float: left;
   width: 83.33333%;
@@ -7288,23 +7298,23 @@ html, body {
   border: none;
 }
 @media (min-width: 768px) {
-  .jumbotron form button {
+  .jumbotron .signup form button {
     float: left;
     width: 25%;
   }
 }
 @media (min-width: 768px) {
-  .jumbotron form button {
+  .jumbotron .signup form button {
     margin-left: 0%;
   }
 }
 @media (min-width: 767px) {
-  .jumbotron form button {
+  .jumbotron .signup form button {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
   }
 }
-.jumbotron form button:hover {
+.jumbotron .signup form button:hover {
   background-color: rgba(235, 165, 171, 0.5);
   color: white;
 }
@@ -7349,9 +7359,6 @@ header.h1 h2 {
   padding-bottom: 3em;
   text-align: center;
 }
-.container .block, .container-fluid .block {
-  display: inline-block;
-}
 
 .mission h1 {
   font-weight: 300;
@@ -7372,6 +7379,60 @@ header.h1 h2 {
   .importantDetails .map iframe {
     height: 40vh;
   }
+}
+
+.faq .block {
+  text-align: left;
+  font-size: 20px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .faq .block {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .faq .block {
+    float: left;
+    width: 33.33333%;
+  }
+}
+@media (max-width: 767px) {
+  .faq .block {
+    height: auto;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .faq .block {
+    height: 20em;
+  }
+}
+@media (min-width: 991px) and (max-width: 1199px) {
+  .faq .block {
+    height: 22em;
+  }
+}
+@media (min-width: 1199px) {
+  .faq .block {
+    height: 18em;
+  }
+}
+.faq .block p {
+  font-size: 1em;
 }
 
 .sponsors {

@@ -10,14 +10,23 @@
 			<h2><small>Open the Door to Programming</small></h2>	
 		</div>
 
-		<form>
-			<div class="row">
-				<div class="emailContainer">
-					<input type="email" class="form-control" id="email" placeholder="Enter email">
+		<div class="signup">
+
+			<%if (showForm) { %>
+			<form action="/" method="post">
+				<div class="row">
+					<div class="emailContainer">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+					</div>
+					<button type="submit" class="btn btn-default">Stay Informed</button>
 				</div>
-				<button type="submit" class="btn btn-default">Stay Informed</button>
-			</div>
-		</form>
+			</form>
+			<% } %>
+
+			<%if (typeof email != 'undefined') { %>
+				<h1><em><%- email %></em></h1>
+			<% } %>
+		</div>
 
 	</div>
 </div>
@@ -59,7 +68,20 @@
 		</header>
 		<div class="container">
 			<div class="block">
-				
+				<h1>What is hackBCA?</h1>
+				<p>hackBCA II is one of the biggest high school hackathons in the nation! The purpose of this hackathon is to give high school students an easy way to learn how to code. Experienced hackers can also come and learn about new technologies that they can use. Check out an article about us on NJ.com!</p>
+			</div>
+			<div class="block">
+				<h1>What is a hackathon?</h1>
+				<p>A hackathon is an event in which teams spend the weekend building something awesome (and then demo it). hackBCA is open to anyone, from the absolute beginner to the professional hacker. Check out Dave Fontenot's post on "What is a hackathon?"</p>
+			</div>
+			<div class="block">
+				<h1>What if I don't know how to code?</h1>
+				<p>There is absolutely nothing wrong with that! Hackathons provide an awesome opportunity for people to learn how to code. Even if you have never programmed before in your life, we will help you get started with the basics of programming and hopefully by the end of the hackathon, you will leave with a working application!</p>
+			</div>
+			<div class="block">
+				<h1>How and when do I submit my hack?</h1>
+				<p>You must submit your hack by 11:00am on Sunday, but can still work on them after 11. We will send an email with more information on Sunday. Please do not start your project before the hackathon begins.</p>
 			</div>
 		</div>
 	</div>

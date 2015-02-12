@@ -76,54 +76,64 @@ html, body {
 		}
 	}
 
-	form {
+	.signup {
 		padding-top: 4em;
-		@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
-			padding-top: 2em;
+		@media (max-width: $screen-xs-max) {
+			padding-top: 1em;
 		}
-		input, button {
-			height: 50px;
-			font-size: 1.5em;
-		}
-
-		.emailContainer {
-			@include make-xs-column(10);
-			@include make-sm-column(5);
-			@include make-xs-column-offset(1);
-			@include make-sm-column-offset(2);
-			padding-left: 0px;
-			padding-right: 0px;
-
-			@media (min-width: $screen-xs-max) {
-				input {
-					@include border-right-radius(0);
-					
-				}
-			}
-
-			@media (max-width: $screen-xs-max) {
-				input {
-					text-align: center;
-				}
-			}
-		}
-		button {
-			@include make-xs-column(10);
-			@include make-sm-column(3);
-			@include make-xs-column-offset(1);
-			@include make-sm-column-offset(0);
+		h1 {
 			color: white;
-			font-weight: 700;
-			background-color: rgba($base-background-color, 0.5);
-			border: none;
-
-			@media (min-width: $screen-xs-max) {
-				@include border-left-radius(0);
+			font-weight: 300;
+			font-size: 3em;
+			@media (max-width: $screen-sm-max) {
+				font-size: 4vw;
+			}
+		}
+		form {
+			input, button {
+				height: 50px;
+				font-size: 1.5em;
 			}
 
-			&:hover {
-				background-color: rgba(mix($base-background-color, $primary-color, 70), 0.5);
+			.emailContainer {
+				@include make-xs-column(10);
+				@include make-sm-column(5);
+				@include make-xs-column-offset(1);
+				@include make-sm-column-offset(2);
+				padding-left: 0px;
+				padding-right: 0px;
+
+				@media (min-width: $screen-xs-max) {
+					input {
+						@include border-right-radius(0);
+						
+					}
+				}
+
+				@media (max-width: $screen-xs-max) {
+					input {
+						text-align: center;
+					}
+				}
+			}
+			button {
+				@include make-xs-column(10);
+				@include make-sm-column(3);
+				@include make-xs-column-offset(1);
+				@include make-sm-column-offset(0);
 				color: white;
+				font-weight: 700;
+				background-color: rgba($base-background-color, 0.5);
+				border: none;
+
+				@media (min-width: $screen-xs-max) {
+					@include border-left-radius(0);
+				}
+
+				&:hover {
+					background-color: rgba(mix($base-background-color, $primary-color, 70), 0.5);
+					color: white;
+				}
 			}
 		}
 	}
@@ -168,9 +178,6 @@ header.h1 {
 	padding-top: 3em;
 	padding-bottom: 3em;
 	text-align: center;
-	.block {
-		display: inline-block;
-	}
 }
 
 .mission {
@@ -192,6 +199,34 @@ header.h1 {
 			@media (max-width: $screen-xs-max) {
 				height: 40vh;
 			}
+		}
+	}
+}
+
+.faq {
+	.block {
+		text-align: left;
+		font-size: 20px;
+
+		@include make-xs-column(12);
+		@include make-sm-column(6);
+		@include make-md-column(4);
+
+		@media (max-width: $screen-xs-max) {
+			height: auto;
+		}
+		@media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+			height: 20em;
+		}
+		@media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
+			height: 22em;
+		}
+		@media (min-width: $screen-md-max) {
+			height: 18em;
+		}
+
+		p {
+			font-size: 1em;
 		}
 	}
 }
