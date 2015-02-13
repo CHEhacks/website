@@ -7440,6 +7440,11 @@ header.h1 h2 {
 .sponsors {
   text-align: center;
 }
+.sponsors .col-centered {
+  display: inline-block;
+  float: none;
+  margin-right: -4px;
+}
 .sponsors .thumbnail {
   background-color: transparent;
   border: none;

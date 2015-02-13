@@ -234,6 +234,12 @@ header.h1 {
 .sponsors {
 	text-align: center;
 	
+	.col-centered {
+		display: inline-block;
+		float: none;
+		margin-right:-4px;
+	}
+
 	.thumbnail {
 		background-color: transparent;
 		border: none;
