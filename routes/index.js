@@ -11,10 +11,21 @@ var EmailSchema = new mongoose. Schema({
 	email: String
 });
 var Email = mongoose.model('Email', EmailSchema);
-
 bronzeSponsorPaths = fs.readdirSync( "public/images/bronze");
+removeDSStore(bronzeSponsorPaths);
+
+function removeDSStore(array) {
+	var dsStoreIndex = array.indexOf('.DS_Store');
+	if (dsStoreIndex > -1)
+	array.splice(dsStoreIndex, 1);
+} 
 
 exports.index = function(req, res){
+	fs.readdir( "public/images/bronze", function(err, fileNames) {
+		removeDSStore(fileNames);
+		bronzeSponsorPaths = fileNames;
+		console.log(bronzeSponsorPaths);
+	});
  	render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: true}, res);
 };
 
