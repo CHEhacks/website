@@ -14,7 +14,7 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
-	background-color: #eee;
+	overflow-x: hidden;
 }
 
 .jumbotron {
@@ -151,7 +151,7 @@ header.h1 {
 	width: 100%;
 	text-align: center;
 	padding: 2em 0em;
-	background-color: $header-background-color;
+	background-color: #eee;
 
 	@media (max-width: $screen-xs-max) {
 		padding-left: 2em;
@@ -264,9 +264,9 @@ header.h1 {
 }
 
 .stayTuned header {
-	background: url("../../images/bg.jpg") #333 no-repeat;
+	background: url("../../images/bottom.png") #333 no-repeat;
 	background-size: cover;
-	background-position: center bottom;
+	background-position: center center;
 
 	h1 {
 		color: white;

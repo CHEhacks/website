@@ -7125,7 +7125,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  background-color: #eee;
+  overflow-x: hidden;
 }
 
 .jumbotron {
@@ -7334,7 +7334,7 @@ header.h1 {
   width: 100%;
   text-align: center;
   padding: 2em 0em;
-  background-color: #edd7d8;
+  background-color: #eee;
 }
 @media (max-width: 767px) {
   header.h1 {
@@ -7352,7 +7352,7 @@ header.h1 h1 {
 }
 header.h1 h2 {
   font-size: 1em;
-  color: #eb8b94;
+  color: #e7767f;
 }
 
 .container, .container-fluid {
@@ -7467,9 +7467,9 @@ header.h1 h2 {
 }
 
 .stayTuned header {
-  background: url("../../images/bg.jpg") #333 no-repeat;
+  background: url("../../images/bottom.png") #333 no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
 }
 .stayTuned header h1 {
   color: white;

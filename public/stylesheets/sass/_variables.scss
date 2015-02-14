@@ -19,7 +19,7 @@ $header-background-color: lighten(mix($primary-color, $light-gray, 20%), 10%);
 $base-font-color: $dark-gray;
 $base-accent-color: rgba(lighten($primary-color, 50%), 0.5);
 $header-large-text-color: $header-primary-color;
-$header-small-text-color: lighten($header-large-text-color, 10%); 
+$header-small-text-color: lighten($header-large-text-color, 5%); 
 
 // Link Colors
 $base-link-color: $base-accent-color;
