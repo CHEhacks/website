@@ -15,6 +15,15 @@ html, body {
 	padding: 0px;
 	height: 100%;
 	overflow-x: hidden;
+	background-color: $header-background-color;
+}
+
+a {
+	font-weight: 300;
+	color: mix($primary-color, yellow, 10%);
+	&:hover {
+		color: mix($primary-color, yellow, 30%);
+	}
 }
 
 .jumbotron {
@@ -152,12 +161,13 @@ header.h1 {
 	text-align: center;
 	padding: 2em 0em;
 	background-color: #eee;
+	font-size: $header-font-size-md;
 
 	@media (max-width: $screen-xs-max) {
 		padding-left: 2em;
 		padding-right: 2em;
 		font-size: 20px;
-		font-size: 5vw;
+		font-size: $header-font-size-xs;
 	}
 
 	h1 {
@@ -177,28 +187,47 @@ header.h1 {
 	padding-top: 3em;
 	padding-bottom: 3em;
 	text-align: center;
+	color: white;
 }
 
 .mission {
+	padding-bottom: 0;
+
 	h1 {
 		font-weight: 300;
+		font-size: $mission-font-size-md;
+		line-height: $mission-line-height-md;
 
-		@media (min-width: $screen-sm-max) {
-			font-size: 2.75vw;
+		@media (max-width: $screen-sm-max) {
+			line-height: $mission-line-height-xs;
+			font-size: $mission-font-size-xs;
 		}
 	}
 }
+.map {
+	position: relative;
+	padding: 0px;
+	iframe {
+		height: 300px;
 
-.importantDetails {
-	.map {
-		padding: 0px;
-		iframe {
-			height: 300px;
-
-			@media (max-width: $screen-xs-max) {
-				height: 200px;
-			}
+		@media (max-width: $screen-xs-max) {
+			height: 200px;
 		}
+	}
+	.address {
+		height: 36px;
+		position: absolute;
+		background-color: $header-background-color;
+		left:0;
+		right:0;
+		bottom:0px;
+		display: flex;
+		display: -webkit-flex;
+	}
+
+	a {
+		font-size: 16px;
+		margin: auto;
 	}
 }
 
@@ -216,17 +245,18 @@ header.h1 {
 			height: auto;
 		}
 		@media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
-			height: 20em;
+			height: 18em;
 		}
 		@media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
-			height: 22em;
+			height: 24em;
 		}
 		@media (min-width: $screen-md-max) {
-			height: 18em;
+			height: 20em;
 		}
 
 		p {
 			font-size: 1em;
+			font-weight: 300;
 		}
 	}
 }
@@ -257,9 +287,6 @@ header.h1 {
 			max-width: 100%;
 			max-height: 100%;
 		}
-	}
-	a {
-		font-weight: 300;
 	}
 }
 

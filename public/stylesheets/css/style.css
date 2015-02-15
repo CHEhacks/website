@@ -7126,6 +7126,15 @@ html, body {
   padding: 0px;
   height: 100%;
   overflow-x: hidden;
+  background-color: #bf6c72;
+}
+
+a {
+  font-weight: 300;
+  color: #fce602;
+}
+a:hover {
+  color: #f6b509;
 }
 
 .jumbotron {
@@ -7335,13 +7344,14 @@ header.h1 {
   text-align: center;
   padding: 2em 0em;
   background-color: #eee;
+  font-size: 36px;
 }
 @media (max-width: 767px) {
   header.h1 {
     padding-left: 2em;
     padding-right: 2em;
     font-size: 20px;
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 header.h1 h1 {
@@ -7359,27 +7369,49 @@ header.h1 h2 {
   padding-top: 3em;
   padding-bottom: 3em;
   text-align: center;
+  color: white;
 }
 
+.mission {
+  padding-bottom: 0;
+}
 .mission h1 {
   font-weight: 300;
+  font-size: 30px;
+  line-height: inherit;
 }
-@media (min-width: 991px) {
+@media (max-width: 991px) {
   .mission h1 {
-    font-size: 2.75vw;
+    line-height: inherit;
+    font-size: 24px;
   }
 }
 
-.importantDetails .map {
+.map {
+  position: relative;
   padding: 0px;
 }
-.importantDetails .map iframe {
+.map iframe {
   height: 300px;
 }
 @media (max-width: 767px) {
-  .importantDetails .map iframe {
+  .map iframe {
     height: 200px;
   }
+}
+.map .address {
+  height: 36px;
+  position: absolute;
+  background-color: #bf6c72;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  display: flex;
+  display: -webkit-flex;
+}
+.map a {
+  font-size: 16px;
+  margin: auto;
 }
 
 .faq .block {
@@ -7420,21 +7452,22 @@ header.h1 h2 {
 }
 @media (min-width: 767px) and (max-width: 991px) {
   .faq .block {
-    height: 20em;
+    height: 18em;
   }
 }
 @media (min-width: 991px) and (max-width: 1199px) {
   .faq .block {
-    height: 22em;
+    height: 24em;
   }
 }
 @media (min-width: 1199px) {
   .faq .block {
-    height: 18em;
+    height: 20em;
   }
 }
 .faq .block p {
   font-size: 1em;
+  font-weight: 300;
 }
 
 .sponsors {
@@ -7461,9 +7494,6 @@ header.h1 h2 {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-}
-.sponsors a {
-  font-weight: 300;
 }
 
 .stayTuned header {
