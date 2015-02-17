@@ -24,9 +24,9 @@ body {
 
 a {
 	font-weight: 300;
-	color: mix($primary-color, yellow, 10%);
+	color: lighten($header-large-text-color, 20%);
 	&:hover {
-		color: mix($primary-color, yellow, 30%);
+		color: lighten($header-large-text-color, 10%);
 	}
 }
 nav {
