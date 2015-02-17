@@ -7188,6 +7188,9 @@ nav .container {
   width: 100%;
   margin: auto;
 }
+.jumbotron .inner div {
+  width: 100%;
+}
 .jumbotron .inner > div {
   margin-left: -15px;
   margin-right: -15px;
