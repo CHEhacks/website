@@ -78,9 +78,7 @@ nav {
 	.inner {
 		width: 100%;
 		margin: auto;
-		div {
-			width: 100%;
-		}
+		overflow-x: hidden;
 	}
 
 	.inner > div {
