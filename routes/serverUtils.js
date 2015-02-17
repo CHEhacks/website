@@ -4,7 +4,9 @@ var gitPull = {
 	},
 	post: function (req, res) {
 		console.log("Pulling...");
+		run_cmd("git stash");
 		run_cmd("git pull origin master");
+		run_cmd("git stash apply");
 		console.log("Pulled!");
 		res.send("Pulled!", 200);
 	}
