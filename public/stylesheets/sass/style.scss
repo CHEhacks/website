@@ -14,8 +14,12 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
+}
+
+body {
 	overflow-x: hidden;
-	background-color: $header-background-color;
+	background-color: #8A1315;
+	position: relative;
 }
 
 a {
@@ -25,13 +29,36 @@ a {
 		color: mix($primary-color, yellow, 30%);
 	}
 }
+nav {
+	position: block;
+	.container {
+		padding: 0;	
+	}
+}
+
+.navbar {
+	.navbar-collapse {
+	  	text-align: center;
+
+	  	.navbar-nav {
+			display: inline-block;
+			float: none;
+			vertical-align: top;
+		}
+
+		ul {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
 
 .jumbotron {
 	display: flex;
 	display: -webkit-flex;
 	align-items: center;
 
-	background: url("../../images/bg.jpg") #333 no-repeat;
+	background: url("../../images/bg.png") #333 no-repeat;
 	background-size: cover;
 	background-position: center center;
 	margin-bottom: 0;
@@ -39,6 +66,7 @@ a {
 	height: 100%;
 
 	@media (max-width: $screen-xs-max){
+		padding-top: 81px;
 		height: auto;
 		display: block;
 	}
@@ -147,11 +175,22 @@ a {
 	}
 }
 
-.sections > .section:not(:first-child) header {
-	border-top: 2px solid $header-primary-color;
+.sections {
+	position: relative;
+	& > .section:not(:first-child) header {
+		border-top: 2px solid $header-primary-color;
+	}	
+	& .sections > .section:not(:last-child) header {
+		border-bottom: 2px solid $header-primary-color;
+	}
 }
-.sections > .section:not(:last-child) header {
-	border-bottom: 2px solid $header-primary-color;
+
+.section {
+	position: relative; 
+	.navstop {
+		position: absolute;
+		top: -48px;
+	}
 }
 
 header.h1 {
@@ -216,11 +255,11 @@ header.h1 {
 	}
 	.address {
 		height: 36px;
-		position: absolute;
-		background-color: $header-background-color;
-		left:0;
-		right:0;
-		bottom:0px;
+		// position: absolute;
+		// background-color: $header-background-color;
+		// left:0;
+		// right:0;
+		// bottom:0px;
 		display: flex;
 		display: -webkit-flex;
 	}
@@ -245,7 +284,7 @@ header.h1 {
 			height: auto;
 		}
 		@media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
-			height: 18em;
+			height: 20em;
 		}
 		@media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
 			height: 24em;
@@ -263,7 +302,6 @@ header.h1 {
 
 .sponsors {
 	text-align: center;
-	
 	.col-centered {
 		display: inline-block;
 		float: none;
@@ -293,7 +331,7 @@ header.h1 {
 .stayTuned header {
 	background: url("../../images/bottom.png") #333 no-repeat;
 	background-size: cover;
-	background-position: center center;
+	background-position: center top;
 
 	h1 {
 		color: white;

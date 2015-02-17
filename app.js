@@ -52,6 +52,7 @@ app.use(express.methodOverride());
 app.use(express.bodyParser());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 // development only
 if ('development' == app.get('env')) {

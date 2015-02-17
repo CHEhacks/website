@@ -7125,8 +7125,12 @@ html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
+}
+
+body {
   overflow-x: hidden;
-  background-color: #bf6c72;
+  background-color: #8A1315;
+  position: relative;
 }
 
 a {
@@ -7137,11 +7141,31 @@ a:hover {
   color: #f6b509;
 }
 
+nav {
+  position: block;
+}
+nav .container {
+  padding: 0;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar .navbar-collapse .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.navbar .navbar-collapse ul {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .jumbotron {
   display: flex;
   display: -webkit-flex;
   align-items: center;
-  background: url("../../images/bg.jpg") #333 no-repeat;
+  background: url("../../images/bg.png") #333 no-repeat;
   background-size: cover;
   background-position: center center;
   margin-bottom: 0;
@@ -7150,6 +7174,7 @@ a:hover {
 }
 @media (max-width: 767px) {
   .jumbotron {
+    padding-top: 81px;
     height: auto;
     display: block;
   }
@@ -7329,12 +7354,22 @@ a:hover {
   color: white;
 }
 
+.sections {
+  position: relative;
+}
 .sections > .section:not(:first-child) header {
   border-top: 2px solid #e4606b;
 }
-
-.sections > .section:not(:last-child) header {
+.sections .sections > .section:not(:last-child) header {
   border-bottom: 2px solid #e4606b;
+}
+
+.section {
+  position: relative;
+}
+.section .navstop {
+  position: absolute;
+  top: -48px;
 }
 
 header.h1 {
@@ -7401,11 +7436,6 @@ header.h1 h2 {
 }
 .map .address {
   height: 36px;
-  position: absolute;
-  background-color: #bf6c72;
-  left: 0;
-  right: 0;
-  bottom: 0px;
   display: flex;
   display: -webkit-flex;
 }
@@ -7452,7 +7482,7 @@ header.h1 h2 {
 }
 @media (min-width: 767px) and (max-width: 991px) {
   .faq .block {
-    height: 18em;
+    height: 20em;
   }
 }
 @media (min-width: 991px) and (max-width: 1199px) {
@@ -7499,7 +7529,7 @@ header.h1 h2 {
 .stayTuned header {
   background: url("../../images/bottom.png") #333 no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
 }
 .stayTuned header h1 {
   color: white;
