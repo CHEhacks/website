@@ -4,19 +4,22 @@ var gitPull = {
 	},
 	post: function (req, res) {
 		console.log("Pulling...");
-		run_cmd("git stash");
-		run_cmd("git pull origin master");
-		run_cmd("git stash apply");
+		run_cmd("git stash", function() {
+			run_cmd("git pull origin master", function() {
+				run_cmd("git stash apply");		
+			});	
+		});
+		
 		console.log("Pulled!");
 		res.send("Pulled!", 200);
 	}
 }
 
-function run_cmd(cmd) {
+function run_cmd(cmd, callback) {
     var sys = require('sys')
 	var exec = require('child_process').exec;
 	function puts(error, stdout, stderr) { sys.puts(stdout) }
-	exec(cmd, puts);
+	exec(cmd, puts, callback);
 }
 
 exports.gitPull = gitPull;
