@@ -46,7 +46,7 @@ exports.signup = function(req, res){
 			});
 		});
 	} else {
-		 res.status(400).end();
+		 res.status(400).redirect('back');
 	}
 }
 

@@ -44,7 +44,7 @@ app.configure(function() {
       mode: 'expanded'
     }));
 });
-app.use(express.favicon());
+app.use(express.favicon("public/images/favicon.png"));
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
