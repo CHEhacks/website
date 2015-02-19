@@ -30,21 +30,24 @@ exports.index = function(req, res){
 };
 
 exports.signup = function(req, res){
-	Email.findOne({email: req.body.email}, function(err, email) {
-		if (err) {
-			return res.send('ERROR', 500);
-		}
-		if (email) {
-			render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' has already been added'}, res);
-		}
-		Email.create(req.body, function(err){
-			if(err) {
-				return next(err);
+	if (req.body.email.length > 0) {
+		Email.findOne({email: req.body.email}, function(err, email) {
+			if (err) {
+				return res.send('ERROR', 500);
 			}
-			render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' added'}, res);
+			if (email) {
+				render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' has already been added'}, res);
+			}
+			Email.create(req.body, function(err){
+				if(err) {
+					return next(err);
+				}
+				render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' added'}, res);
+			});
 		});
-
-	});
+	} else {
+		 res.status(400).end();
+	}
 }
 
 var render = function(page, vars, res) {
