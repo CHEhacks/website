@@ -7313,6 +7313,8 @@ nav .container {
 }
 @media (max-width: 767px) {
   .jumbotron .signup form .emailContainer input {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     text-align: center;
   }
 }
@@ -7347,6 +7349,12 @@ nav .container {
 @media (min-width: 767px) {
   .jumbotron .signup form button {
     border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+@media (max-width: 767px) {
+  .jumbotron .signup form button {
+    border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
 }

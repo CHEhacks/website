@@ -140,18 +140,19 @@ nav {
 				padding-left: 0px;
 				padding-right: 0px;
 
-				@media (min-width: $screen-xs-max) {
-					input {
-						@include border-right-radius(0);
-						
+				input {
+					@media (min-width: $screen-xs-max) {	
+							@include border-right-radius(0);
 					}
-				}
 
-				@media (max-width: $screen-xs-max) {
-					input {
+					@media (max-width: $screen-xs-max) {
+						@include border-bottom-radius(0);
 						text-align: center;
 					}
+
 				}
+
+				
 			}
 			button {
 				@include make-xs-column(10);
@@ -165,6 +166,10 @@ nav {
 
 				@media (min-width: $screen-xs-max) {
 					@include border-left-radius(0);
+				}
+
+				@media (max-width: $screen-xs-max) {
+					@include border-top-radius(0);
 				}
 
 				&:hover {
