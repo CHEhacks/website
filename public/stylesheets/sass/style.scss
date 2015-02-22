@@ -110,6 +110,7 @@ nav {
 		h2 small {
 			padding: 0;
 			font-size: 1.25em;
+			overflow-x: visible;
 		}
 	}
 
@@ -141,7 +142,7 @@ nav {
 				padding-right: 0px;
 
 				input {
-					@media (min-width: $screen-xs-max) {	
+					@media (min-width: $screen-xs-max) {
 							@include border-right-radius(0);
 					}
 
