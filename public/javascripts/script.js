@@ -8,10 +8,7 @@ function activateNavItem(id) {
 $(function() {
 	$(window).scroll(function (){
 
-		// console.log( "window:" + $(window).scrollTop() );
 		var windowPosition = $(window).scrollTop();
-		// var navHeight = $(".navbar").height();
-		// var navPosition = windowPosition + navHeight;
 
 		//Find navstops
 		var navstops = [];
@@ -20,15 +17,9 @@ $(function() {
 			navstops.push($(targetId));
 		};
 
-		// console.log(navPosition);
-		// console.log($(navstops[0]).offset().top);
-		// console.log("offset: " + $(navstops[0]).offset().top);
-
 		if (windowPosition + $(window).height() >= $(document).height()) {
-			console.log("bottom!");
 			var navstop = navstops[0];
 			activateNavItem(navstop.attr("id"));
-			console.log(navstop);
 			return;
 		}
 
@@ -37,7 +28,6 @@ $(function() {
 			var navstopPosition = navstop.offset().top;
 
 			if (windowPosition >= navstopPosition) {
-				console.log(navstop.attr("id"));
 				activateNavItem(navstop.attr("id"));
 				break;
 			};

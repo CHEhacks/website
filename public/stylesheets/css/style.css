@@ -7171,6 +7171,7 @@ nav .container {
   margin-bottom: 0;
   text-align: center;
   height: 100%;
+  overflow-x: hidden;
 }
 @media (max-width: 767px) {
   .jumbotron {
@@ -7187,7 +7188,7 @@ nav .container {
 .jumbotron .inner {
   width: 100%;
   margin: auto;
-  overflow-x: hidden;
+  overflow-x: visible;
 }
 .jumbotron .inner > div {
   margin-left: -15px;
@@ -7256,7 +7257,6 @@ nav .container {
 .jumbotron .text h2 small {
   padding: 0;
   font-size: 1.25em;
-  overflow-x: visible;
 }
 .jumbotron .signup {
   padding-top: 4em;
