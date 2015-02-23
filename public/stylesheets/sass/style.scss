@@ -78,7 +78,7 @@ nav {
 	.inner {
 		width: 100%;
 		margin: auto;
-		overflow-x: hidden;
+		overflow-x: visible;
 	}
 
 	.inner > div {
@@ -96,6 +96,7 @@ nav {
 	}
 
 	.text {
+		overflow: visible;
 		padding-top: 2em;
 		@media (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
 			padding-top: 1em;
@@ -110,7 +111,7 @@ nav {
 		h2 small {
 			padding: 0;
 			font-size: 1.25em;
-			overflow-x: visible;
+			overflow: visible;
 		}
 	}
 
