@@ -21,27 +21,27 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(
-     sassMiddleware({
-        src: __dirname + '/sass',
-        dest: __dirname + '/public/stylesheets',
-    	debug: true,
-    	outputStyle: 'compressed'
-    })
-);
-app.use(
-     sassMiddleware({
-        src: __dirname + '/sass',
-        dest: __dirname + '/public/stylesheets',
-    	debug: true,
-    	outputStyle: 'compressed'
-    })
-);
+// app.use(
+//      sassMiddleware({
+//         src: __dirname + '/sass',
+//         dest: __dirname + '/public/stylesheets',
+//     	debug: true,
+//     	outputStyle: 'compressed'
+//     })
+// );
+// app.use(
+//      sassMiddleware({
+//         src: __dirname + '/sass',
+//         dest: __dirname + '/public/stylesheets',
+//     	debug: true,
+//     	outputStyle: 'compressed'
+//     })
+// );
 app.configure(function() {
     app.use(compass({
       sass: 'stylesheets/sass',
       css: 'stylesheets/css',
-      mode: 'expanded'
+      mode: 'compressed'
     }));
 });
 app.use(express.favicon("public/images/favicon.png"));
