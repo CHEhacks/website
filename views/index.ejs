@@ -127,15 +127,33 @@
 			<h1>SPONSORS</h1>
 		</header>
 		<div class="container">
-			<div class="row bronze">
-				<% for(var i=0; i<bronzeSponsorPaths.length; i++) {%>
-					<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+
+			<div class="row silver">
+				<% for(var i=0; i<silverSponsors.length; i++) {%>
+					<div class="col-xs-8 col-sm-6 col-md-4 col-centered">
 						<div class="thumbnail">
-							<img src="images/bronze/<%= bronzeSponsorPaths[i] %>" alt="sponsor"> 
+							<a href="<%= silverSponsors[i].url%>" target="_blank">
+								<img src="images/silver/<%= silverSponsors[i].image%>" alt="<%= silverSponsors[i].name%>"> 
+							</a>
+							
 						</div>
 					</div>
 				<% } %>
 			</div>
+
+			<div class="row bronze">
+				<% for(var i=0; i<bronzeSponsors.length; i++) {%>
+					<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+						<div class="thumbnail">
+							<a href="<%= bronzeSponsors[i].url%>" target="_blank">
+								<img src="images/bronze/<%= bronzeSponsors[i].image%>" alt="<%= bronzeSponsors[i].name%>"> 
+							</a>
+							
+						</div>
+					</div>
+				<% } %>
+			</div>
+
 			
 			<h2><a href="sponsors.pdf" target="_blank">Interested in sponsoring?</a></h2>
 		</div>

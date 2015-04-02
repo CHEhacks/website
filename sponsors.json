@@ -1,0 +1,32 @@
+{
+	"bronze": [
+		{
+			"name": "Point.io",
+			"url": "http://point.io",
+			"image": "pointio.png"
+		},
+		{
+			"name":"Syncano",
+			"url": "http://syncano.com",
+			"image": "syncano.png"
+		},
+		{
+			"name": "LearnToMod",
+			"url": "http://www.learntomod.com/",
+			"image": "learntomod.png"
+		},
+		{
+			"name": "BStack Networks",
+			"url": "http://bstack.net/",
+			"image": "bstack.png"
+		}
+	],
+
+	"silver": [
+		{
+			"name": "Praxis: Break the mold",
+			"url": "https://www.discoverpraxis.com",
+			"image": "praxis.png"
+		}
+	]
+}

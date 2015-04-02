@@ -5,13 +5,19 @@
 
 var express = require('express');
 var fs = require('fs');
+var path = require('path');
 
 var mongoose = require('mongoose');
 var EmailSchema = new mongoose. Schema({
 	email: String
 });
 var Email = mongoose.model('Email', EmailSchema);
+
 bronzeSponsorPaths = fs.readdirSync( "public/images/bronze");
+var sponsorsPath =  path.normalize(__dirname + "/../sponsors.json");
+var sponsorsFile = fs.readFileSync(sponsorsPath, 'utf8');
+var sponsorObj = JSON.parse(sponsorsFile);
+
 removeDSStore(bronzeSponsorPaths);
 
 function removeDSStore(array) {
@@ -21,12 +27,22 @@ function removeDSStore(array) {
 } 
 
 exports.index = function(req, res){
-	fs.readdir( "public/images/bronze", function(err, fileNames) {
-		removeDSStore(fileNames);
-		bronzeSponsorPaths = fileNames;
-		console.log(bronzeSponsorPaths);
+
+	fs.readFile(sponsorsPath, function(err, data) {
+		
+		if (err) throw err
+		var obj = JSON.parse(data)
+
+		var bronze = obj.bronze;
+		var silver = obj.silver;
+
+		render('index', 
+		{
+			bronzeSponsors: bronze, 
+			silverSponsors: silver,
+			showForm: true
+		}, res);
 	});
- 	render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: true}, res);
 };
 
 exports.signup = function(req, res){

@@ -310,6 +310,7 @@ header.h1 {
 
 .sponsors {
 	text-align: center;
+
 	.col-centered {
 		display: inline-block;
 		float: none;
@@ -317,21 +318,19 @@ header.h1 {
 	}
 
 	.thumbnail {
-		background-color: transparent;
-		border: none;
-	}
-	.bronze .thumbnail {
-		display: flex;
-		display: -webkit-flex;
 		height: 100px;
-		margin-bottom: 30px;
 
-		img {
-			margin: auto;
+		a {
+			display: block;
+			height: 100%;
 			width: 100%;
-			height: auto;
-			max-width: 100%;
-			max-height: 100%;
+			img {
+				@include vertical-align;
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
 		}
 	}
 }
