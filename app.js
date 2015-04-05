@@ -18,6 +18,7 @@ var db = require('mongoose').connect(dbURL);
 var app = express();
 
 // all environments
+app.use(express.compress());
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
