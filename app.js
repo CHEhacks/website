@@ -9,7 +9,6 @@ var user = require('./routes/user');
 var serverUtils = require('./routes/serverUtils');
 var http = require('http');
 var path = require('path');
-var sassMiddleware = require('node-sass-middleware');
 var compass = require('node-compass');
 
 var dbURL = 'mongodb://localhost/database';
