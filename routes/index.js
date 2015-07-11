@@ -8,71 +8,78 @@ var fs = require('fs');
 var path = require('path');
 
 var mongoose = require('mongoose');
-var EmailSchema = new mongoose. Schema({
-	email: String
-});
+var EmailSchema = new mongoose.Schema({ email: String });
 var Email = mongoose.model('Email', EmailSchema);
 
-bronzeSponsorPaths = fs.readdirSync( "public/images/bronze");
 var sponsorsPath =  path.normalize(__dirname + "/../sponsors.json");
-var sponsorsFile = fs.readFileSync(sponsorsPath, 'utf8');
-var sponsorObj = JSON.parse(sponsorsFile);
+var sponsors = {
+    loaded: false,
+    bronze: undefined,
+    silver: undefined,
+    gold: undefined
+}
 
-removeDSStore(bronzeSponsorPaths);
+//Functions
+function loadSponsors(callback) {
+    //Create sponsors object
+    if (sponsors.loaded == false) {
+        fs.readFile(sponsorsPath, function(err, data) {
+            
+            obj = JSON.parse(data)
+            sponsors.bronze = obj.bronze;
+            sponsors.silver = obj.silver;
+            sponsors.gold = obj.gold;
 
-function removeDSStore(array) {
-	var dsStoreIndex = array.indexOf('.DS_Store');
-	if (dsStoreIndex > -1)
-	array.splice(dsStoreIndex, 1);
-} 
+            if (typeof callback != "undefined") {    
+                callback();
+            }
+        });
+
+    //Use existing sponsors object
+    } else {
+        if (typeof callback != "undefined") {
+            callback();
+        }
+    }
+}
 
 exports.index = function(req, res){
-
-	fs.readFile(sponsorsPath, function(err, data) {
-		
-		if (err) throw err
-		var obj = JSON.parse(data)
-
-		var bronze = obj.bronze;
-		var silver = obj.silver;
-
-		render('index', 
-		{
-			bronzeSponsors: bronze, 
-			silverSponsors: silver,
-			showForm: true
-		}, res);
-	});
+    loadSponsors(function() {
+        render('index.ejs', 
+        {
+            bronzeSponsors: sponsors.bronze, 
+            silverSponsors: sponsors.silver,
+            gold: sponsors.gold,
+            showForm: true
+        }, res);
+    });
 };
 
 exports.signup = function(req, res){
-	if (req.body.email.length > 0) {
-		Email.findOne({email: req.body.email}, function(err, email) {
-			if (err) {
-				return res.send('ERROR', 500);
-			}
-			if (email) {
-				render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' has already been added'}, res);
-			}
-			Email.create(req.body, function(err){
-				if(err) {
-					return next(err);
-				}
-				render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' added'}, res);
-			});
-		});
-	} else {
-		 res.status(400).redirect('back');
-	}
+    res.send("lol");
+    // if (req.body.email.length > 0) {
+    //     Email.findOne({email: req.body.email}, function(err, email) {
+    //         if (err) {
+    //             return res.send('ERROR', 500);
+    //         }
+    //         if (email) {
+    //             render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' has already been added'}, res);
+    //         }
+    //         Email.create(req.body, function(err){
+    //             if(err) {
+    //                 return next(err);
+    //             }
+    //             render('index', {bronzeSponsorPaths: bronzeSponsorPaths, showForm: false, email: req.body.email + ' added'}, res);
+    //         });
+    //     });
+    // } else {
+    //      res.status(400).redirect('back');
+    // }
 }
 
 var render = function(page, vars, res) {
-  express().render(page + '.ejs', vars, function(err, html) {
-    if(err) {
-      console.log(err);
-    } else {
-      vars.content = html;
-      res.render('outer', vars);
-    }
-  });
+    express().render(page, vars, function(err, html) {
+        console.log(html);
+        res.render('outer.ejs', { content: html });
+    });
 }

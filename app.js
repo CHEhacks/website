@@ -3,6 +3,18 @@
  * Module dependencies.
  */
 
+(function() {
+    var childProcess = require("child_process");
+    oldSpawn = childProcess.spawn;
+    function mySpawn() {
+        console.log('spawn called');
+        console.log(arguments);
+        var result = oldSpawn.apply(this, arguments);
+        return result;
+    }
+    childProcess.spawn = mySpawn;
+})();
+
 var express = require('express');
 var routes = require('./routes');
 var user = require('./routes/user');
@@ -19,8 +31,8 @@ var app = express();
 // all environments
 app.use(express.compress());
 app.set('port', process.env.PORT || 3000);
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 app.configure(function() {
     app.use(compass({
       sass: 'stylesheets/sass',
@@ -38,9 +50,8 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
-// development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+  app.use(express.errorHandler());  
 }
 
 app.get('/', routes.index);

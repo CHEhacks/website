@@ -1,4 +1,9 @@
-# CHE hacks website
-CHE hacks is a hackathon at [Cherry Hill High School East](https://www.google.com/maps/place/Cherry+Hill+High+School+East/@39.876549,-74.964047,17z/data=!3m1!4b1!4m2!3m1!1s0x89c1334c710f413f:0x17a270bfdcd9340a).
+CHE hacks
+==========================
+CHE hacks is a hackathon at the [Cherry Hill Public Library](https://goo.gl/SsJoqy).
 
-Site is currently **under construction**
+Requirements
+============
+*	[Node.js](https://nodejs.org/download/)
+*	[Mongodb](http://docs.mongodb.org/manual/installation/)
+	*	create a 
