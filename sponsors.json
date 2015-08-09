@@ -1,27 +1,20 @@
 {
 	"bronze": [
 		{
-			"name": "Point.io",
-			"url": "http://point.io",
-			"image": "pointio.png"
-		},
-		{
 			"name":"Syncano",
+			"title": "",
 			"url": "http://syncano.com",
 			"image": "syncano.png"
 		},
 		{
 			"name": "LearnToMod",
+			"title": "",
 			"url": "http://www.learntomod.com/",
 			"image": "learntomod.png"
 		},
 		{
-			"name": "BStack Networks",
-			"url": "http://bstack.net/",
-			"image": "bstack.png"
-		},
-		{
 			"name": "Lob",
+			"title": "",
 			"url": "https://lob.com",
 			"image": "lob.png"
 		}
@@ -30,6 +23,7 @@
 	"silver": [
 		{
 			"name": "Praxis: Break the mold",
+			"title": "Praxis is a one year program for entrepreneurially young people that combines a job at an amazing company, intensive professional development, and self-guided education.",
 			"url": "https://www.discoverpraxis.com",
 			"image": "praxis.png"
 		}
