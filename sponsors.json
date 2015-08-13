@@ -1,12 +1,6 @@
 {
 	"bronze": [
 		{
-			"name":"Syncano",
-			"title": "",
-			"url": "http://syncano.com",
-			"image": "syncano.png"
-		},
-		{
 			"name": "LearnToMod",
 			"title": "",
 			"url": "http://www.learntomod.com/",
@@ -17,6 +11,24 @@
 			"title": "",
 			"url": "https://lob.com",
 			"image": "lob.png"
+		},
+		{
+			"name": "Microsoft",
+			"title": "",
+			"url": "http://www.microsoft.com",
+			"image": "microsoft.png"
+		},
+		{
+			"name":"Syncano",
+			"title": "Syncano lets you easily build powerful apps. Integrate with any API, minimize boilerplate code and control your data - all from one place.",
+			"url": "http://syncano.com",
+			"image": "syncano.png"	
+		},
+		{
+			"name": "Treehouse",
+			"title": "With Treehouse you can learn the valuable skills you need to go from zero coding experience to job ready for the tech industry. Start learning today!",
+			"url": "https://teamtreehouse.com/signup_code/chehacks",
+			"image": "treehouse.png"
 		}
 	],
 
