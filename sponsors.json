@@ -1,6 +1,12 @@
 {
 	"bronze": [
 		{
+			"name": "KPCB",
+			"title": "",
+			"url": "http://kpcbfellows.com/build-for-good/challenges",
+			"image": "kpcb.png"
+		},
+		{
 			"name": "LearnToMod",
 			"title": "",
 			"url": "http://www.learntomod.com/",
