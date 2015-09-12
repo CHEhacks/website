@@ -58,6 +58,9 @@ app.get('/', routes.index);
 app.post('/', routes.signup);
 app.get('/gitpull', serverUtils.gitPull.get);
 app.post('/gitpull', serverUtils.gitPull.post);
+app.get('/coc', function(req, res) {
+  res.sendFile(path.join(__dirname, '../public', 'Code_of_Conduct.pdf'));
+});
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
