@@ -140,9 +140,9 @@ nav {
 			padding: 0em 2em;
 
 			@media (max-width: $screen-xs-max) {
-				// &:not(:last-child) {
-				// 	padding-bottom: 1em;
-				// }	
+				&:not(:last-child) {
+					padding-bottom: 1em;
+				}	
 			}
 		}
 	}
