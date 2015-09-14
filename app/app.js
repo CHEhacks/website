@@ -19,7 +19,12 @@ var app = express();
 exports.app = app;
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+if ('development' == app.get('env')) {
+  app.set('port', process.env.DEVPORT || 4000);
+} else {
+  app.set('port', process.env.PORT || 3000);
+}
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '../views'));
 app.use(express.logger('dev'));
