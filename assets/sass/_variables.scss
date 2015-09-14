@@ -1,0 +1,55 @@
+$font-family-sans-serif:  'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+
+// Colors
+$blue: #477DCA;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #DDD;
+$light-red: #FBE3E4;
+$light-yellow: #FFF6BF;
+$light-green: #E6EFC2;
+$primary-color: #E20B1E;
+
+// Background Color
+$base-background-color: lighten(mix($primary-color, $light-gray, 10%), 10%);
+$header-primary-color: lighten(mix($primary-color, $light-gray, 70%), 5%);  
+$header-background-color: darken(mix($primary-color, $light-gray, 20%), 20%);  
+// $container-background-color: 
+
+// Font Colors
+$base-font-color: $dark-gray;
+$base-accent-color: rgba(lighten($primary-color, 50%), 0.5);
+$header-large-text-color: $header-primary-color;
+$header-small-text-color: lighten($header-large-text-color, 5%); 
+
+// Link Colors
+$base-link-color: $base-accent-color;
+$hover-link-color: darken($base-link-color, 15);
+$base-button-color: $base-link-color;
+$hover-button-color: $hover-link-color;
+
+// Flash Colors
+$alert-color: $light-yellow;
+$error-color: $light-red;
+$notice-color: lighten($base-accent-color, 40);
+$success-color: $light-green;
+
+// Border color
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-border-color: $base-border-color;
+$form-border-color-hover: darken($base-border-color, 10);
+$form-border-color-focus: $base-accent-color;
+$form-box-shadow: inset 0 1px 3px rgba(black,0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px rgba(darken($form-border-color-focus, 5), 0.7);
+
+// Font sizes
+$header-font-size-xs: 4vw;
+$header-font-size-md: 36px;
+
+$mission-font-size-xs: 24px;
+$mission-font-size-md: 30px;
+$mission-line-height-xs: inherit;
+$mission-line-height-md: inherit;
