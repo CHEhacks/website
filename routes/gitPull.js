@@ -1,4 +1,4 @@
-var app = require('../app/app.js')
+var app = require('../app/app.js').app;
 
 exports.get =  function (req, res) {
 	res.send("Can't pull from GET request!");
