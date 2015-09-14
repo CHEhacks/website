@@ -1,4 +1,4 @@
-var app = require('../app/app.js').app;
+var app = require('../app/app.js');
 
 exports.get =  function (req, res) {
 	res.send("Can't pull from GET request!");
@@ -7,8 +7,8 @@ exports.get =  function (req, res) {
 exports.post = function (req, res){
 	console.log("Pulling...");
 	
-	if (typeof app.get('gitPath') != 'undefined'){
-		run_cmd("cd " + app.get('gitPath')  + " && git pull");	
+	if (typeof app.app.get('gitPath') != 'undefined'){
+		run_cmd("cd " + app.app.get('gitPath')  + " && git pull");	
 	} else {
 		run_cmd("git pull");
 	}
