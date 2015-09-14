@@ -16,7 +16,6 @@ var path = require('path');
 var compass = require('node-compass');
 var express = require('express');
 var app = express();
-exports.app = app;
 
 // all environments
 if ('development' == app.get('env')) {
@@ -55,6 +54,10 @@ app.post('/gitpull', routes.gitPull.post);
 app.get('/coc', routes.coc.get);
 app.get('/mentor', routes.mentor.get);
 
-http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
+exports.app = app;
+
+if (!process.env.ON_SERVER || process.env.ON_SERVER=='false'){
+  http.createServer(app).listen(app.get('port'), function(){
+    console.log('Express server listening on port ' + app.get('port'));
+  });
+}
