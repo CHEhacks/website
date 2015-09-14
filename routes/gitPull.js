@@ -6,9 +6,10 @@ exports.post = function (req, res){
 	console.log("Pulling...");
 		
 	run_cmd("git pull");
+	console.log("Pulled!");
+	
 	run_cmd("forever restartall");	
 
-	console.log("Pulled!");
 	res.send("Pulled!", 200);
 };
 
