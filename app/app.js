@@ -1,14 +1,14 @@
-// (function() {
-//     var childProcess = require("child_process");
-//     oldSpawn = childProcess.spawn;
-//     function mySpawn() {
-//         console.log('spawn called');
-//         console.log(arguments);
-//         var result = oldSpawn.apply(this, arguments);
-//         return result;
-//     }
-//     childProcess.spawn = mySpawn;
-// })();
+(function() {
+    var childProcess = require("child_process");
+    var oldSpawn = childProcess.spawn;
+    function mySpawn() {
+        console.log('spawn called');
+        console.log(arguments);
+        var result = oldSpawn.apply(this, arguments);
+        return result;
+    }
+    childProcess.spawn = mySpawn;
+})();
 
 var routes = require('../routes');
 var http = require('http');
@@ -53,6 +53,7 @@ app.get('/', routes.home.get);
 app.get('/gitpull', routes.gitPull.get);
 app.post('/gitpull', routes.gitPull.post);
 app.get('/coc', routes.coc.get);
+app.get('/mentor', routes.mentor.get);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
