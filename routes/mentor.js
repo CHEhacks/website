@@ -1,3 +1,3 @@
 exports.get = function(req, res) {
-	res.send("You're a ")
+	res.send("You're a mentor!")
 }
