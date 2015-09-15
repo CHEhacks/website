@@ -53,6 +53,7 @@ app.get('/gitpull', routes.gitPull.get);
 app.post('/gitpull', routes.gitPull.post);
 app.get('/coc', routes.coc.get);
 app.get('/mentor', routes.mentor.get);
+app.get('/resume', routes.resume.get);
 
 exports.app = app;
 
