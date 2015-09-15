@@ -8,9 +8,9 @@ exports.post = function (req, res){
 	console.log("Pulling...");
 	
 	if (typeof app.app.get('gitPath') != 'undefined'){
-		run_cmd("cd " + app.app.get('gitPath')  + " && git pull && forever restartall");	
+		run_cmd("cd " + app.app.get('gitPath')  + " && git pull; forever restartall");	
 	} else {
-		run_cmd("git pull && forever restartall");
+		run_cmd("git pull; forever restartall");
 	}
 	
 	console.log("Pulled!");
