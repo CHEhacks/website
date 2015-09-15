@@ -177,12 +177,12 @@ nav {
 }
 
 .primaryButton {
-	height: 50px;
+	height: 70px;
 	background-color: rgba($base-background-color, 0.5);
 	border: none;
 	color: white;
 	font-weight: 700;
-	font-size: 1.5em;
+	font-size: 1.8em;
 
 	&:hover {
 		background-color: rgba(mix($base-background-color, $primary-color, 70), 0.5);
@@ -298,7 +298,7 @@ header.h1 {
 .faq {
 	.block {
 		text-align: left;
-		font-size: 20px;
+		font-size: 16px;
 
 		@include make-xs-column(12);
 		@include make-sm-column(6);
@@ -308,14 +308,18 @@ header.h1 {
 			text-align: center;
 			height: auto;
 		}
-		@media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
-			height: 20em;
-		}
-		@media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
-			height: 24em;
-		}
-		@media (min-width: $screen-md-max) {
-			height: 20em;
+		// @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+		// 	height: 20em;
+		// }
+		// @media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
+		// 	height: 24em;
+		// }
+		// @media (min-width: $screen-md-max) {
+		// 	height: 20em;
+		// }
+
+		h1 {
+			font-size: 1.5em;
 		}
 
 		p {
