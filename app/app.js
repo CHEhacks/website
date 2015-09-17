@@ -54,6 +54,7 @@ app.post('/gitpull', routes.gitPull.post);
 app.get('/coc', routes.coc.get);
 app.get('/mentor', routes.mentor.get);
 app.get('/resume', routes.resume.get);
+app.get('/music', routes.music.get);
 
 exports.app = app;
 
