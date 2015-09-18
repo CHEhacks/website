@@ -41,6 +41,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.bodyParser());
 app.use(app.router);
+app.use(express.static(path.join(__dirname, '/../public/assets/pdf')));
 app.use(express.static(path.join(__dirname, '/../public')));
 app.use('/bower_components',  express.static(__dirname + '/../support/bower_components'));
 
