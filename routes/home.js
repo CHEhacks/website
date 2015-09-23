@@ -8,6 +8,7 @@ exports.get = function(req, res){
             bronzeSponsors: sponsors.bronze, 
             silverSponsors: sponsors.silver,
             gold: sponsors.gold,
+            partners: sponsors.partners,
             showForm: true
         }, res);
     });

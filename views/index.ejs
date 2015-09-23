@@ -92,7 +92,7 @@
 		<div class="container">
 			<div class="block">
 				<h1>What is a hackathon?</h1>
-				<p>A hackathon is a timed event during which students who share an enthusiasm for technology build cool things, called software or hardware "hacks". Teams will compete to make the coolest hacks and win prizes! Although hackathons are competitions, they're fantastic learning experiences. Click <a href="http://medium.com/hackathons-anonymous/3d5413601c05">here</a> for more info.</p>
+				<p>A hackathon is a timed event during which students who share an enthusiasm for technology build cool things, called software or hardware "hacks". Although hackathons are competitions, they're fantastic learning experiences. Click <a href="http://medium.com/hackathons-anonymous/3d5413601c05">here</a> for more info.</p>
 			</div>
 			<div class="block">
 				<h1>What if I don't know how to code?</h1>
@@ -141,7 +141,7 @@
 
 			<div class="block">
 				<h1>How do I get there?</h1>
-				<p>CHE Hacks will take place at the Cherry Hill Public Library. The public library is easily accessible off of Route 295. Doors open at 12 PM on Saturday, and the event wraps up at 2 PM on Sunday.</p>
+				<p>CHE Hacks will take place at the <a href="https://www.google.com/maps/place/Cherry+Hill+Public+Library/@39.9205103,-75.004413,17z/data=!3m1!4b1!4m2!3m1!1s0x89c6cb0da7993605:0x6b92d74781954744" target="_blank">Cherry Hill Public Library</a>. The public library is easily accessible off of I-295. Doors open at 12 PM on Saturday, and the event wraps up at 2 PM on Sunday.</p>
 			</div>
 		</div>
 	</div>
@@ -153,12 +153,49 @@
 		</header>
 		<div class="container">
 
-			<div class="row silver">
-				<% for(var i=0; i<silverSponsors.length; i++) {%>
-					<div class="col-xs-8 col-sm-6 col-md-4 col-centered">
+			<div class="block">
+				<h4>We &lt;3 our sponsors and partners. They enable us to keep CHE Hacks free. They also help us make CHE Hacks the best learning experience possible by providing mentors, technology and all kinds of other help. Huge thanks!</h4>
+			</div>
+
+			<div class="block">
+				<div class="row silver">
+					<% for(var i=0; i<silverSponsors.length; i++) {%>
+						<div class="col-xs-8 col-sm-6 col-md-4 col-centered">
+							<div class="thumbnail">
+								<a href="<%= silverSponsors[i].url%>" target="_blank">
+									<img src="assets/images/silver/<%= silverSponsors[i].image%>" alt="<%= silverSponsors[i].name%>" title="<%= silverSponsors[i].title %>"> 
+								</a>
+								
+							</div>
+						</div>
+					<% } %>
+				</div>
+
+				<div class="row bronze">
+					<% for(var i=0; i<bronzeSponsors.length; i++) {%>
+						<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+							<div class="thumbnail">
+								<a href="<%= bronzeSponsors[i].url%>" target="_blank">
+									<img src="assets/images/bronze/<%= bronzeSponsors[i].image%>" alt="<%= bronzeSponsors[i].name%>" title="<%= bronzeSponsors[i].title %>"> 
+								</a>
+								
+							</div>
+						</div>
+					<% } %>
+				</div>
+				<a href="assets/pdf/sponsors.pdf" target="_blank"><button class="btn btn-default">Interested in sponsoring?</button></a>
+			</div>
+
+			<div class="strike block">
+			    <h2>Partners</h2>
+			</div>
+
+			<div class="row bronze">
+				<% for(var i=0; i<partners.length; i++) {%>
+					<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
 						<div class="thumbnail">
-							<a href="<%= silverSponsors[i].url%>" target="_blank">
-								<img src="assets/images/silver/<%= silverSponsors[i].image%>" alt="<%= silverSponsors[i].name%>" title="<%= silverSponsors[i].title %>"> 
+							<a href="<%= partners[i].url%>" target="_blank">
+								<img src="assets/images/partners/<%= partners[i].image%>" alt="<%= partners[i].name%>" title="<%= partners[i].title %>"> 
 							</a>
 							
 						</div>
@@ -166,19 +203,6 @@
 				<% } %>
 			</div>
 
-			<div class="row bronze">
-				<% for(var i=0; i<bronzeSponsors.length; i++) {%>
-					<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
-						<div class="thumbnail">
-							<a href="<%= bronzeSponsors[i].url%>" target="_blank">
-								<img src="assets/images/bronze/<%= bronzeSponsors[i].image%>" alt="<%= bronzeSponsors[i].name%>" title="<%= bronzeSponsors[i].title %>"> 
-							</a>
-							
-						</div>
-					</div>
-				<% } %>
-			</div>
-			<a href="assets/pdf/sponsors.pdf" target="_blank"><button class="btn btn-default">Interested in sponsoring?</button></a>
 		</div>
 	</div>
 
