@@ -154,18 +154,13 @@
 		<div class="container">
 
 			<div class="block">
-				<h4>We &lt;3 our sponsors and partners. They enable us to keep CHE Hacks free. They also help us make CHE Hacks the best learning experience possible by providing mentors, technology and all kinds of other help. Huge thanks!</h4>
-			</div>
-
-			<div class="block">
 				<div class="row silver">
 					<% for(var i=0; i<silverSponsors.length; i++) {%>
-						<div class="col-xs-8 col-sm-6 col-md-4 col-centered">
+						<div class="thumbnail-container">
 							<div class="thumbnail">
 								<a href="<%= silverSponsors[i].url%>" target="_blank">
 									<img src="assets/images/silver/<%= silverSponsors[i].image%>" alt="<%= silverSponsors[i].name%>" title="<%= silverSponsors[i].title %>"> 
 								</a>
-								
 							</div>
 						</div>
 					<% } %>
@@ -173,17 +168,15 @@
 
 				<div class="row bronze">
 					<% for(var i=0; i<bronzeSponsors.length; i++) {%>
-						<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+						<div class="thumbnail-container">
 							<div class="thumbnail">
 								<a href="<%= bronzeSponsors[i].url%>" target="_blank">
 									<img src="assets/images/bronze/<%= bronzeSponsors[i].image%>" alt="<%= bronzeSponsors[i].name%>" title="<%= bronzeSponsors[i].title %>"> 
 								</a>
-								
 							</div>
 						</div>
 					<% } %>
 				</div>
-				<a href="assets/pdf/sponsors.pdf" target="_blank"><button class="btn btn-default">Interested in sponsoring?</button></a>
 			</div>
 
 			<div class="strike block">
@@ -192,15 +185,19 @@
 
 			<div class="row bronze">
 				<% for(var i=0; i<partners.length; i++) {%>
-					<div class="col-xs-4 col-sm-3 col-md-2 col-centered">
+					<div class="thumbnail-container">
 						<div class="thumbnail">
 							<a href="<%= partners[i].url%>" target="_blank">
 								<img src="assets/images/partners/<%= partners[i].image%>" alt="<%= partners[i].name%>" title="<%= partners[i].title %>"> 
 							</a>
-							
 						</div>
 					</div>
 				<% } %>
+			</div>
+
+			<div class="block">
+				<h4>We &lt;3 our sponsors and partners. They enable us to keep CHE Hacks free. They also help us make CHE Hacks the best learning experience possible by providing mentors, technology and all kinds of other help. Huge thanks!</h4>
+				<a href="assets/pdf/sponsors.pdf" target="_blank"><button class="btn btn-default">Interested in sponsoring?</button></a>
 			</div>
 
 		</div>

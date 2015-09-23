@@ -5,3 +5,9 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+@mixin col_centered {
+	display: inline-block;
+	float: none !important;
+	margin-right:-4px;
+}
