@@ -418,6 +418,26 @@ header.h1 {
 	}
 }
 
+.ambassadors {
+
+}
+
+.ambassador {
+	@include make-xs-column(5);
+	@include make-sm-column(4);
+	@include make-md-column(2);
+
+	img {
+		width: 100%;
+		height: auto;
+		border-radius: 50%;
+
+		&:hover {
+			box-shadow:0px 0px 10px #999;
+		}
+	}
+}
+
 .stayTuned header {
 	background: url("/assets/images/bottom.png") #333 no-repeat;
 	background-size: cover;
