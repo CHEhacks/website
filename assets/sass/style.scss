@@ -313,15 +313,6 @@ header.h1 {
 			text-align: center;
 			height: auto;
 		}
-		// @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
-		// 	height: 20em;
-		// }
-		// @media (min-width: $screen-sm-max) and (max-width: $screen-md-max) {
-		// 	height: 24em;
-		// }
-		// @media (min-width: $screen-md-max) {
-		// 	height: 20em;
-		// }
 
 		h1 {
 			font-size: 1.5em;
@@ -366,12 +357,12 @@ header.h1 {
 	}
 }
 
+.col-centered {
+	@include col-centered;
+}
+
 .sponsors {
 	text-align: center;
-
-	.col-centered {
-		@include col-centered;
-	}
 
 	.thumbnail-container {
 		@include col-centered;
@@ -419,13 +410,20 @@ header.h1 {
 }
 
 .ambassadors {
+	text-align: center;
+	color: white;
 
+	.container .block:not(:last-child) {
+		margin-bottom: 30px;
+	}
 }
 
 .ambassador {
-	@include make-xs-column(5);
-	@include make-sm-column(4);
+	@include make-xs-column(3);
 	@include make-md-column(2);
+	@include col-centered;
+	margin-top: 10px;
+	margin-bottom: 10px;
 
 	img {
 		width: 100%;
