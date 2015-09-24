@@ -419,7 +419,8 @@ header.h1 {
 }
 
 .ambassador {
-	@include make-xs-column(3);
+	@include make-xs-column(4);
+	@include make-sm-column(2);
 	@include make-md-column(2);
 	@include col-centered;
 	margin-top: 10px;
