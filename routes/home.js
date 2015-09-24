@@ -1,14 +1,15 @@
-var sponsors = require('../lib/sponsors.js')
+var data = require('../lib/data.js')
 var render = require('../lib/render.js')
 
 exports.get = function(req, res){
-    sponsors.loadSponsors(function(sponsors) {
+    data.loadData(function(obj) {
         render.render('index.ejs', 
         {
-            bronzeSponsors: sponsors.bronze, 
-            silverSponsors: sponsors.silver,
-            gold: sponsors.gold,
-            partners: sponsors.partners,
+            bronzeSponsors: obj.bronze, 
+            silverSponsors: obj.silver,
+            goldSponsors: obj.gold,
+            partners: obj.partners,
+            ambassadors: obj.ambassadors,
             showForm: true
         }, res);
     });
