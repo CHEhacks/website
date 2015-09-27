@@ -37,12 +37,6 @@
 			"image": "treehouse.png"
 		},
 		{
-			"name": "Twilio",
-			"title": "",
-			"url": "https://www.twilio.com",
-			"image": "twilio.png"
-		},
-		{
 			"name": "Fedora",
 			"title": "The Fedora Project is a partnership of free and open source software developers that builds Fedora, one of the leading open source Linux distributions available today.",
 			"url": "http://fedoraproject.org/",
