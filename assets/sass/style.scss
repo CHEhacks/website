@@ -138,6 +138,7 @@ nav {
 		}
 
 		.buttonContainer {
+			@include col-centered;
 			@include make-xs-column(10);
 			@include make-sm-column(4);
 			@include make-xs-column-offset(1);
