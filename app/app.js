@@ -56,6 +56,7 @@ app.get('/coc', routes.coc.get);
 app.get('/mentor', routes.mentor.get);
 app.get('/resume', routes.resume.get);
 app.get('/music', routes.music.get);
+app.get('/schedule', routes.schedule.get);
 
 exports.app = app;
 
