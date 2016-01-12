@@ -1,9 +1,21 @@
-CHE hacks
+CHE Hacks
 ==========================
-CHE hacks is a hackathon at the [Cherry Hill Public Library](https://goo.gl/SsJoqy).
+CHE Hacks is a hackathon at the [Cherry Hill Public Library](https://goo.gl/SsJoqy).
 
 Requirements
 ============
 *	[Node.js](https://nodejs.org/download/)
-*	[Mongodb](http://docs.mongodb.org/manual/installation/)
-	*	create a 
+*	[Compass](http://compass-style.org/install/)
+
+```
+$ gem update --system
+$ gem install compass
+```
+
+Running
+=======
+```
+$ cd app
+$ npm install
+$ node app.js
+```
