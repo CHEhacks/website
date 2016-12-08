@@ -41,7 +41,8 @@ googleAnalytics = ""
 	# Hero section
 	[params.hero]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
-		slogan     = "CHEHacks II"
+		# slogan     = "CHEHacks II"
+		image = "true" #paths set in css file, this just needs to exist
 		subtitle   = "**Coming Soon...**"
 		# subtitle2  = "**Open the Door to Programming**"
 		# buttonText = "Find out more"

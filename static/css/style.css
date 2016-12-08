@@ -1,0 +1,11 @@
+@media(min-width: 633px) {
+  .logo {
+    content:url("../img/logo.png");
+  }
+}
+
+@media(max-width: 632px){
+  .logo {
+    content:url("../img/logoSm.png");
+  }
+}
