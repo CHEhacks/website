@@ -1,4 +1,4 @@
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "http://chehacks.github.io/website"
 languageCode = "en-us"
 title = "CHEHacks II"
 theme = "hugo-creative-theme"
