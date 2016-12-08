@@ -5,7 +5,7 @@
 - Run `hugo server` in the repo folder.
 - Go to localhost:1313
 
-## To turn the site:
+## To turn the site into static site:
 
 - Navigate to the directory of the project
 - run the command ```hugo -t hugo-creative-theme```
