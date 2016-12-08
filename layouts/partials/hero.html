@@ -5,6 +5,11 @@
             {{ with .Site.Params.hero.slogan }}
                 <h1>{{ . | markdownify  }}</h1>
             {{ end }}
+            {{ with .Site.Params.hero.image }}
+                <img class="logo">
+                <br>
+                <br>
+            {{ end }}
             {{ if and .Site.Params.hero.slogan .Site.Params.hero.subtitle }}
                 <hr>
             {{ end }}
