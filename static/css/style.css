@@ -3,6 +3,31 @@
   color: #FFF !important;
 }
 
+#mainNav {
+  background-color: #8A1315;
+}
+
+li .page-scroll {
+  /*color: #777 !important;*/
+}
+
+.navbar-default.affix .navbar-header .navbar-brand {
+  color: #CCC !important;
+}
+
+.navbar-default.affix .nav > li>a, .navbar-default.affix .nav>li>a:focus {
+      color: #999 !important;
+}
+
+.navbar-default .nav > li.active>a, .navbar-default .nav>li.active>a:focus {
+  color: #CCC !important;
+  background-color: transparent;
+}
+
+.navbar-default.affix .nav > li>a:hover, .navbar-default.affix .nav>li>a:focus:hover {
+  color: #DDD !important;
+}
+
 @media(min-width: 633px) {
   .logo {
     content:url("../img/logo.png");
