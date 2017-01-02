@@ -17,10 +17,10 @@
               <p class = "subtitle">{{ . | markdownify }}</p>
             {{ end }}
             {{ with .Site.Params.hero.subtitle2 }}
-                <p>{{ . | markdownify }}</p>
+                <p class = "subtitle sub2">{{ . | markdownify }}</p>
             {{ end }}
             {{ with .Site.Params.hero.buttonText }}
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">{{ . }}</a>
+                <a href="#about" class="btn btn-top btn-xl page-scroll">{{ . }}</a>
             {{ end }}
         </div>
     </div>

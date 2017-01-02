@@ -42,15 +42,15 @@ googleAnalytics = ""
 	[params.hero]
 		# To change the background of the hero section, replace the 'header.jpg' at './static/img' with your own.
 		# slogan     = "CHEHacks II"
-		image = "true" #paths set in css file, this just needs to exist
-		subtitle   = "**Coming Soon...**"
-		# subtitle2  = "**Open the Door to Programming**"
-		# buttonText = "Find out more"
+		image = "true" # paths set in css file, this just needs to exist
+		subtitle   = "May 13-14"
+		subtitle2  = "Open the Door to Programming"
+		buttonText = "Sign up"
 
 		# About section
 		[params.about]
-			headline    = "We've got what you need!"
-			description = "[Lorem](//google.com) ipsum dolor sit amet, consectetur adipisicing elit. Praesentium similique eos eligendi error veritatis harum, sed aliquid totam, quam minus neque enim est architecto, ad. Maiores, aliquid, vitae!"
+			headline    = "Come Learn to Code"
+			description = "CHE Hacks is a high school hackathon for students who are excited to learn programming!  We'll provide mentors and a fun environment; you just come with a desire to learn.  More advanced? Don't worry, CHE Hacks has got you covered too."
 			buttonText  = "Get started!"
 
 

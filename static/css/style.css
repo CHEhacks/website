@@ -1,24 +1,72 @@
 .subtitle {
   font-family: 'Roboto', sans-serif;
   color: #FFF !important;
+  margin-bottom: 10px !important;
+}
+
+.hr-red {
+  border-color: #AA4049 !important;
+}
+
+.btn-top {
+  background-color : rgba(240,232,232,0.5);
+  color: white;
+}
+
+.btn-top:hover {
+  background-color: rgba(235,165,171,0.5);
+  color: white;
+}
+
+.btn-top:visited {
+  color: white;
+}
+
+.btn-top:active {
+  color: white;
+}
+
+.btn-top:focus {
+  color: white;
+}
+
+.text-faded-red {
+  color: #AA4049;
 }
 
 @media (min-width: 768px){
   .navbar-default {
-      border-color: rgba(255,255,255,.3);
-      background-color: transparent;
+    border-color: rgba(255,255,255,.3);
+    background-color: transparent;
   }
-}
-
-@media (min-width: 768px) {
+  .subtitle {
+    font-size : 24px !important;
+  }
+  .sub2 {
+    font-size: 36px !important;
+  }
   .navbar-default.affix {
       border-color: rgba(34,34,34,.05);
       background-color: #8A1315 !important;
   }
 }
 
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 18px !important;
+  }
+  .sub2 {
+    font-size: 24px !important;
+  }
+}
+
 li .page-scroll {
   /*color: #777 !important;*/
+}
+
+.bg-primary {
+  background-color: #EEE;
+  color : #AA4049;
 }
 
 .navbar-default.affix .navbar-header .navbar-brand {
