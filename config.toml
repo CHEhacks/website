@@ -56,28 +56,43 @@ googleAnalytics = ""
 
 		# Service section
 		[params.services]
-			headline = "At your service"
+			headline = "Frequently Asked Questions"
 
 	    	[[params.services.list]]
-	      	icon = "fa-diamond"
-	        title = "Sturdy Templates"
-	        description = "Our templates are updated regularly so they don't break."
+	        title = "What is a hackathon?"
+	        description = "A hackathon is a timed event during which students who share an enthusiasm for technology build cool things, called software or hardware \"hacks\". Although hackathons are competitions, they're fantastic learning experiences. Click [here](https://medium.com/hackathons-anonymous/what-is-a-hackathon-3d5413601c05#.10t1rwkj2) for more info."
 
 	      [[params.services.list]]
-					icon = "fa-paper-plane"
-					title = "Ready to Ship"
-					description = "You can use this theme as is, or you can make changes!"
+					title = "What if I don't know how to code?"
+					description = "Perfect! CHE Hacks is *the hackathon* for learning how to code, so even if you've never programmed before, don't worry! We'll have plenty of workshops to get you started and mentors to help you out."
 
 				[[params.services.list]]
-	          icon = "fa-newspaper-o"
-	          title = "Up to Date"
-	        	description = "We update dependencies to keep things fresh."
+	          title = "What if I'm *not* a beginner?"
+	        	description = "Great! CHE Hacks is just as open to advanced developers as it is to beginners. Looking to pursue more advanced hacks? Our mentors can help you with that too."
 
 	      [[params.services.list]]
-	  				icon = "fa-heart"
-	          title = "Made with Love"
-	          description = "You have to make your websites with love these days!"
+	          title = "What should I build?"
+	          description = "Many people build games, apps, or websites. However, if you have an idea for something else, you can certainly try making it. If you don't have an idea, that's totally fine too! Either way, our mentors at the workshops can help you with your hack."
 
+				[[params.services.list]]
+						title = "How do I make a team?"
+						description = "First, you can try asking other people from your school. Introduce your friends to hackathons if they haven't heard of them already! If that doesn't work, don't worry, we'll give you a chance to talk to other participants before and during CHE Hacks. If you want to, you can also work individually, but we encourage you to try to work with others for the best learning experience."
+
+				[[params.services.list]]
+						title = "What should I bring?"
+						description = "Just bring your laptop and charger! Some people choose to work for the full 24 hours, but if you plan on sleeping, you can also bring a sleeping bag and pillow."
+
+				[[params.services.list]]
+						title = "What if I want to sleep?"
+						description = "We will provide a designated sleeping area (away from noise and light) – perhaps even with air mattresses."
+
+				[[params.services.list]]
+						title = "What will I eat?"
+						description = "We’ll provide food for all meals from Saturday’s dinner to Sunday’s lunch, with plenty of snacks in between. If you have dietary restrictions, we’ll try our best to accommodate them."
+
+				[[params.services.list]]
+						title = "How do I get there?"
+						description = "CHE Hacks will take place at the [Cherry Hill Public Library](https://www.google.com/maps/place/Cherry+Hill+Public+Library/@39.9205103,-75.004413,17z/data=!3m1!4b1!4m2!3m1!1s0x89c6cb0da7993605:0x6b92d74781954744). The public library is easily accessible off of I-295. Doors open at 12 PM on Saturday, and the event wraps up at 2 PM on Sunday."
 
 	  # Portfolio modals
 		[params.portfolio.modal]

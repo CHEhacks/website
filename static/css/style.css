@@ -1,3 +1,5 @@
+/*#8A1315*/
+
 .subtitle {
   font-family: 'Roboto', sans-serif;
   color: #FFF !important;
@@ -8,9 +10,46 @@
   border-color: #AA4049 !important;
 }
 
+.bg-CHE {
+  background-color: #8A1315;
+}
+
+.txt-CHE {
+  color: white;
+}
+
+.txt-CHE-muted {
+  color: #CCC;
+}
+
 .btn-top {
   background-color : rgba(240,232,232,0.5);
   color: white;
+}
+
+.btn-mid {
+  background-color : #AA4049;
+  color : #EEE !important;
+}
+
+.btn-mid:hover {
+  background-color : #93333B !important;
+  color : #EEE !important;
+}
+
+.btn-mid:visited {
+  background-color : #AA4049;
+  color : #EEE !important;
+}
+
+.btn-mid:active {
+  background-color : #AA4049;
+  color : #EEE !important;
+}
+
+.btn-mid:focus {
+  background-color : #93333B;
+  color : #EEE !important;
 }
 
 .btn-top:hover {
