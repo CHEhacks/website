@@ -13,13 +13,39 @@
     <div class="container">
         <div class="row">
             {{ range .Site.Params.services.list }}
-            <div class="col-lg-4 col-md-6 text-left">
-                <div class="service-box">
-                    <h3 class = "txt-CHE">{{ .title | markdownify }}</h3>
-                    {{ with .description }}
-                        <p class="text-muted txt-CHE-muted">{{ . | markdownify }}</p>
-                    {{ end }}
-                </div>
+            <div class="row">
+              <div class="col-lg-3 col-md-6 text-left">
+                  <div class="service-box">
+                      <h3 class = "txt-CHE">{{ .title | markdownify }}</h3>
+                      {{ with .description }}
+                          <p class="text-muted txt-CHE-muted">{{ . | markdownify }}</p>
+                      {{ end }}
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-left">
+                  <div class="service-box">
+                      <h3 class = "txt-CHE">{{ .title2 | markdownify }}</h3>
+                      {{ with .description2 }}
+                          <p class="text-muted txt-CHE-muted">{{ . | markdownify }}</p>
+                      {{ end }}
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-left">
+                  <div class="service-box">
+                      <h3 class = "txt-CHE">{{ .title3 | markdownify }}</h3>
+                      {{ with .description3 }}
+                          <p class="text-muted txt-CHE-muted">{{ . | markdownify }}</p>
+                      {{ end }}
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 text-left">
+                  <div class="service-box">
+                      <h3 class = "txt-CHE">{{ .title4 | markdownify }}</h3>
+                      {{ with .description4 }}
+                          <p class="text-muted txt-CHE-muted">{{ . | markdownify }}</p>
+                      {{ end }}
+                  </div>
+              </div>
             </div>
             {{ end }}
         </div>

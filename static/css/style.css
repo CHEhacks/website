@@ -87,6 +87,9 @@
   .navbar-default.affix {
       border-color: rgba(34,34,34,.05);
       background-color: #8A1315 !important;
+      outline-color: white;
+      outline-style: solid;
+      outline-width: 1px;
   }
 }
 
