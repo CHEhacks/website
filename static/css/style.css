@@ -6,6 +6,27 @@
   margin-bottom: 10px !important;
 }
 
+.txt-center {
+  text-align: center;
+}
+
+.map {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.address {
+  text-align: center;
+}
+
+.no-pad-bottom {
+  padding-bottom: 0px;
+}
+
+.md-pad-top {
+  padding-top: 72px;
+}
+
 .hr-red {
   border-color: #AA4049 !important;
 }
@@ -70,7 +91,15 @@
 }
 
 .text-faded-red {
-  color: #AA4049;
+  color: #AA4049 !important;
+}
+
+.txt-lg {
+  font-size: 72px !important;
+}
+
+.txt-xl {
+  font-size: 92px !important;
 }
 
 @media (min-width: 768px){
@@ -91,6 +120,10 @@
       outline-style: solid;
       outline-width: 1px;
   }
+  .md-50 {
+    width: 50%;
+    margin-left:25%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -99,6 +132,9 @@
   }
   .sub2 {
     font-size: 24px !important;
+  }
+  .sm-100 {
+    width: 100%;
   }
 }
 
@@ -109,6 +145,14 @@ li .page-scroll {
 .bg-primary {
   background-color: #EEE;
   color : #AA4049;
+}
+
+.icon-primary {
+  color: white;
+}
+
+#contact {
+  background-image: url('../img/footer.png');
 }
 
 .navbar-default.affix .navbar-header .navbar-brand {
@@ -128,13 +172,13 @@ li .page-scroll {
   color: #DDD !important;
 }
 
-@media(min-width: 633px) {
+@media(min-width: 695px) {
   .logo {
     content:url("../img/logo.png");
   }
 }
 
-@media(max-width: 632px){
+@media(max-width: 695px){
   .logo {
     content:url("../img/logoSm.png");
   }

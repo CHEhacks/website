@@ -1,0 +1,22 @@
+{{ "<!-- CONTACT -->" | safeHTML }}
+<section class ="bg-CHE md-pad-top" id="contact">
+    <div class="container">
+        <div class="row txt-center">
+          {{ with .Site.Params.contact.headline }}
+              <h2 class="section-heading txt-lg icon-primary"><strong>{{ . }}</strong></h2>
+          {{ end }}
+          <br>
+          <div class="md-50 sm-100">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <a href="{{ .Site.Params.contact.facebook }}"><i class="fa fa-facebook-square txt-xl icon-primary" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <a href="{{ .Site.Params.contact.twitter }}"><i class="fa fa-twitter-square txt-xl icon-primary" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+              <a href = "{{ .Site.Params.contact.instagram }}"><i class="fa fa-instagram txt-xl icon-primary" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>

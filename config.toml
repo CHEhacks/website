@@ -104,23 +104,15 @@ googleAnalytics = ""
 	    category = "Category"
 	   	buttonText = "Close"
 
-	  # Aside section
-		[params.aside]
-			headline = "Get the Creative Theme for Hugo"
-
-		 	[params.aside.button]
-		 		text = "Download now"
-		 		link = "//github.com/digitalcraftsman/hugo-creative-theme"
-
 		# Contact section
 		[params.contact]
-			headline = "Let's Get In Touch!"
-			description = "Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!"
-			phone = "123-456-6789"
-			email = "feedback@startbootstrap.com"
+			headline = "Follow Us"
+			facebook = "https://www.facebook.com/CHEHacks"
+			twitter = "https://twitter.com/che_hacks"
+			instagram = "https://www.instagram.com/che_hacks/"
 
     # Google Maps section
-    #	[params.location]
-    #	latitude  = "34.007850"
-    #	longitude = "-118.499305"
-    #	maps_api_key = ""
+    [params.location]
+    	latitude  = "39.92046"
+    	longitude = "-75.0066967"
+    	maps_api_key = "AIzaSyC3kZ6gNI42yNUQQXYfxEn3ULdUb6RY0WE"
