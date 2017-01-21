@@ -2,17 +2,12 @@
     <div class="container-fluid">
         <div class="row no-gutter">
             {{ range .Site.Data.projects }}
-                <div class="col-lg-4 col-sm-6">
+                <div class="col-lg-4 col-sm-6" width="100%" height="100%">
                     <a href="#portfolioModal{{ .modalID }}" class="portfolio-box portfolio-link" data-toggle="modal">
                         <img src="img/portfolio/{{ .img }}" class="img-responsive" alt="">
                         {{ if and .category .title }}
                             <div class="portfolio-box-caption">
                                 <div class="portfolio-box-caption-content">
-                                    {{ with .category }}
-                                        <div class="project-category text-faded">
-                                            {{ . }}
-                                        </div>
-                                    {{ end }}
                                     {{ with .title }}
                                         <div class="project-name">
                                             {{ . }}
