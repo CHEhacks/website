@@ -46,6 +46,7 @@ googleAnalytics = ""
 		subtitle   = "May 13-14"
 		subtitle2  = "Open the Door to Programming"
 		buttonText = "Sign up"
+		buttonReplacementText = "Registrations Coming Soon..."
 
 		# About section
 		[params.about]

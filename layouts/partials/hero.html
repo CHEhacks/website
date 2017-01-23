@@ -19,8 +19,11 @@
             {{ with .Site.Params.hero.subtitle2 }}
                 <p class = "subtitle sub2">{{ . | markdownify }}</p>
             {{ end }}
-            {{ with .Site.Params.hero.buttonText }}
+            <!-- {{ with .Site.Params.hero.buttonText }}
                 <a href="#about" class="btn btn-top btn-xl page-scroll">{{ . }}</a>
+            {{ end }} -->
+            {{ with .Site.Params.hero.buttonReplacementText }}
+                <p class = "subtitle text-disabled">{{ . | markdownify }}</p>
             {{ end }}
         </div>
     </div>
